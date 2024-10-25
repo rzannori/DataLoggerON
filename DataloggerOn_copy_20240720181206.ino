@@ -74,7 +74,7 @@ if (satellite > 0){
       ledPin=13;
               Serial.println ("writing");
               File data=SD.open("DatiVolo",FILE_WRITE);
-              data.println(Date + " , " + Time + " , " + String(gps.location.lat(), 6)+ " , " + String(gps.location.lng(), 6)+ " , " + String(gps.altitude.meters(),0)+ " , " + String(gps.speed.kmph(),0) + " , " + String(gps.satellites.value())); 
+              data.println(Date + " , " + Time + " , " + String(gps.location.lng(), 6)+ " , " + String(gps.location.lat(), 6)+ " , " + String(gps.altitude.meters(),0)+ " , " + String(gps.speed.kmph(),0) + " , " + String(gps.satellites.value())); 
               data.close();
               digitalWrite(ledPin, LOW);   // turn the LED on (HIGH is the voltage level)
               delay(TState);                       // wait for a second
